@@ -28,4 +28,5 @@ app.controller("RolodexController", ['$http', function($http){
       console.log(error);
     })
   }
+  this.getUsers()
 }])

@@ -27,9 +27,14 @@
     <div class="shower">
       <table>
         <tr ng-repeat="user in ctrl.users">
-          <td>{{user.username}}</td>
           <td>{{user.fName}}</td>
           <td>{{user.lName}}</td>
+          <td>{{user.contact.github}}</td>
+          <td>{{user.contact.linkedin}}</td>
+          <td>{{user.contact.website}}</td>
+          <td ng-repeat="skill in user.skills">{{skill}}</td>
+          <td>{{user.location}}</td>
+          <td>{{user.brand}}</td>
         </tr>
       </table>
     </div>
