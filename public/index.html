@@ -8,6 +8,21 @@
   </head>
   <body ng-controller="RolodexController as ctrl">
     <h1>Welcome to Cohortrolodex!</h1>
+
+<!-- LOGIN FORM  -->
+  <form ng-submit="ctrl.login">
+
+    <!-- USERNAME -->
+    <input ng-model="ctrl.loginUsername" type="text" placeholder="username" required>
+
+    <!-- PASSWORD -->
+    <input ng-model="ctrl.loginPassword" type="password" placeholder="password" required>
+
+    <!-- LOGIN  -->
+    <input type="submit" name="" value="Login">
+</form>
+
+<!-- CREATE NEW USER FORM -->
     <div class="creator">
       Submit user:
       <form ng-submit="ctrl.createUser()">
