@@ -5,6 +5,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const db = mongoose.connection;
 const app = express();
+const session = require("express-session");
 require("dotenv").config();
 
 //===============
@@ -12,11 +13,26 @@ require("dotenv").config();
 //===============
 app.use(express.json());
 app.use(express.static("public"));
-const PORT = process.env.PORT || 3000;
-const MONGODB_URI = process.env.MONGODB_URI;
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 
+//=============
+//CONTROLLERS
+//=============
 const usersController = require("./controllers/users.js");
 app.use("/users", usersController);
+
+//=====================
+//MONGOOSE AND MONGODB
+//=====================
+
+const PORT = process.env.PORT || 3000;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
