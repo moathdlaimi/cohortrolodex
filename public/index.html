@@ -10,7 +10,7 @@
     <h1>Welcome to Cohortrolodex!</h1>
 
 <!-- LOGIN FORM  -->
-  <form ng-submit="ctrl.login">
+  <form ng-submit="ctrl.login()">
 
     <!-- USERNAME -->
     <input ng-model="ctrl.loginUsername" type="text" placeholder="username" required>
@@ -23,7 +23,7 @@
 </form>
 
 <!-- LOGOUT  -->
-<button ng-if="loggedInUser" ng-click="ctrl.logout()" type="button" name="button">Logout</button>
+<button ng-if="ctrl.loggedInUser" ng-click="ctrl.logout()" type="button" name="button">Logout</button>
 
 <!-- CREATE NEW USER FORM -->
     <div class="creator">
