@@ -9,7 +9,7 @@ const userSchema = new Schema({
   contact: {
     github:String,
     linkedin:String,
-    website:String,
+    website:String, 
   },
   skills:[{type:String}],
   location:String,
