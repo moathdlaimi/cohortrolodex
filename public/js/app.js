@@ -50,7 +50,7 @@ app.controller("RolodexController", [
         }
       });
     };
-    
+
 
     //DELETE
     //=========
@@ -59,7 +59,7 @@ app.controller("RolodexController", [
             method:'DELETE',
             url:'/users/' + id
         }).then((response) => {
-            this.loggedInUser = response.data
+            this.loggedInUser = false
         })
     }
 
