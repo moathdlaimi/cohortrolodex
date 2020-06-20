@@ -62,7 +62,7 @@
           <li ng-repeat="skill in user.skills">{{skill}}</li>
         </ul>
         <p>{{user.brand}}</p>
-        <button class="delete-x" ng-click= 'ctrl.deleteUser(user._id)'>Delete</button>
+        <button class="delete" ng-click= 'ctrl.deleteUser(user._id)' ng-if= 'ctrl.loggedInUser._id == user._id'>Delete</button>
       </div>
     </div>
   </body>
