@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" ng-app="RolodexApp">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>cohortrolodex</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
   </head>
-  <body>
-    <h1>Hello World!</h1>
-
+  <body ng-controller="RolodexController as ctrl">
+    <h1>Welcome to Cohortrolodex!</h1>
+    <div class="creator">
+      Submit user:
+      <form ng-submit="ctrl.createUser()">
+        <input type="text" placeholder="Username" ng-model="ctrl.createForm.username"></br>
+        <input type="text" placeholder="Password" ng-model="ctrl.createForm.password"></br>
+        <input type="text" placeholder="First Name" ng-model="ctrl.createForm.fName"></br>
+        <input type="text" placeholder="Last Name" ng-model="ctrl.createForm.lName"></br>
+        <input type="submit" value="Create User"></br>
+      </form>
+    </div>
+    <div class="shower">
+      <table>
+        <tr ng-repeat="user in ctrl.users">
+          <td>{{user.username}}</td>
+          <td>{{user.fName}}</td>
+          <td>{{user.lName}}</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
