@@ -51,6 +51,19 @@ app.controller("RolodexController", [
       });
     };
 
+
+    //DELETE
+    //=========
+    this.deleteUser = (id) => {
+        $http({
+            method:'DELETE',
+            url:'/users/' + id
+        }).then((response) => {
+            this.loggedInUser = false
+        })
+    }
+
+
     //INDEX
     //=========
     this.getUsers = () => {
