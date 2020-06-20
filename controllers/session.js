@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const User = require('../models/users.js')
 const bcrypt = require('bcrypt')
-const users = express.Router();
+const router = express.Router();
 
 
 //LOG-IN
