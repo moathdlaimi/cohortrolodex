@@ -29,9 +29,9 @@
         <tr ng-repeat="user in ctrl.users">
           <td>{{user.fName}}</td>
           <td>{{user.lName}}</td>
-          <td>{{user.contact.github}}</td>
-          <td>{{user.contact.linkedin}}</td>
-          <td>{{user.contact.website}}</td>
+          <td><a href="{{user.contact.github}}">{{user.contact.github}}</a></td>
+          <td> <a href="{{user.contact.linkedin}}">{{user.contact.linkedin}}</a> </td>
+          <td> <a href="{{user.contact.website}}">{{user.contact.website}}</a> </td>
           <td ng-repeat="skill in user.skills">{{skill}}</td>
           <td>{{user.location}}</td>
           <td>{{user.brand}}</td>
