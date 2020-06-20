@@ -34,6 +34,8 @@ app.use(function (req, res, next) {
 //=============
 const usersController = require("./controllers/users.js");
 app.use("/users", usersController);
+const sessionController = require("./controllers/session.js");
+app.use("/session", sessionController);
 
 //=====================
 //MONGOOSE AND MONGODB
