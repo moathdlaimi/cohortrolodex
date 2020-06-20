@@ -4,8 +4,15 @@ app.controller("RolodexController", ['$http', function($http){
   this.createUser = {}
   this.users = []
   this.user = {}
-  const controller = this;
 
+  this.loggedInUser = false
+
+// ==================
+// ==================
+
+
+  //NEW USER
+  //=========
   this.createUser = () => {
     $http({
       method: 'POST',
@@ -18,6 +25,34 @@ app.controller("RolodexController", ['$http', function($http){
       console.log(error);
     })
   }
+
+
+  //NEW LOGIN
+  //=========
+  this.login = () => {
+      $http({
+          url:'/session',
+          method:'POST',
+          data: {
+              username: this.loginUsername,
+              password: this.loginPassword
+          }
+      }).then((response) => {
+          if(response.data.username){
+              this.loggedInUser = response.data
+
+          } else {
+            this.loginUsername = null
+            this.loginPassword = null
+          }
+      })
+
+  }
+
+
+
+  //INDEX
+  //=========
   this.getUsers = () => {
     $http({
       method: 'GET',
@@ -28,5 +63,40 @@ app.controller("RolodexController", ['$http', function($http){
       console.log(error);
     })
   }
-  this.getUsers()
-}])
+
+
+//=========
+  this.getUsers();
+
+
+
+//TO KEEP THE SESSION ALIVE
+//=========
+$http({
+    method:'GET',
+    url:'/session'
+  }).then(function(response){
+      if(response.data.username){
+        this.loggedInUser = response.data
+      }
+  })
+
+//LOG OUT
+//=========
+this.logout = () => {
+    $http({
+        url:'/session',
+        method:'DELETE'
+    }).then((response) => {
+        this.loggedInUser = false
+    })
+
+}
+
+
+
+
+
+
+
+}]) ////
