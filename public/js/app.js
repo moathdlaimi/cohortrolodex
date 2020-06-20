@@ -51,18 +51,36 @@ app.controller("RolodexController", [
       });
     };
 
+    //UPDATE
+    //=========
+    this.editUser = (id) => {
+      $http({
+        method: "PUT",
+        url: "/users/" + id,
+        data: this.updateForm,
+      }).then(
+        (response) => {
+          this.updateForm = {};
+          // this.loggedInUser = response.data;
+          this.getUsers();
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    };
 
     //DELETE
     //=========
     this.deleteUser = (id) => {
-        $http({
-            method:'DELETE',
-            url:'/users/' + id
-        }).then((response) => {
-            this.loggedInUser = false
-        })
-    }
-
+      $http({
+        method: "DELETE",
+        url: "/users/" + id,
+      }).then((response) => {
+        this.loggedInUser = false;
+        this.getUsers();
+      });
+    };
 
     //INDEX
     //=========

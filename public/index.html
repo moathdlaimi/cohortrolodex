@@ -62,7 +62,27 @@
           <li ng-repeat="skill in user.skills">{{skill}}</li>
         </ul>
         <p>{{user.brand}}</p>
-        <button class="delete-x" ng-click= 'ctrl.deleteUser(user._id)'>Delete</button>
+        <button class="delete" ng-click= 'ctrl.deleteUser(user._id)' ng-if= 'ctrl.loggedInUser._id == user._id'>Delete</button>
+        <td>
+          <button
+          ng-if="$index !== ctrl.indexOfEditFormToShow && ctrl.loggedInUser._id == user._id"
+          ng-click="ctrl.indexOfEditFormToShow = $index">
+          Edit User
+        </button>
+        <form
+        ng-if="$index === ctrl.indexOfEditFormToShow"
+        ng-submit="ctrl.editUser(user._id)">
+        <input type="text" placeholder="First Name" ng-model="ctrl.updateForm.fName" ng-value="user.fName"></br>
+        <input type="text" placeholder="Last Name" ng-model="ctrl.updateForm.lName" ng-value="user.lName"></br>
+        <input type="url"  placeholder="Profile image" ng-model="ctrl.updateForm.profilePic" ng-value="user.profilePic"><br>
+        <input type="text" placeholder="Github" ng-model="ctrl.updateForm.contact.github" ng-value="user.contact.github"></br>
+        <input type="text" placeholder="Linkedin" ng-model="ctrl.updateForm.contact.linkedin" ng-value="user.contact.linkedin"></br>
+        <input type="text" placeholder="Wesbite" ng-model="ctrl.updateForm.contact.website" ng-value="user.contact.website"></br>
+        <input type="text" placeholder="Skills" ng-model="ctrl.updateForm.skills" ng-value="user.skills"></br>
+        <input type="text" placeholder="Location" ng-model="ctrl.updateForm.location" ng-value="user.location"></br>
+        <input type="text" placeholder="Description" ng-model="ctrl.updateForm.brand" ng-value="user.brand"></br>
+        <input type="submit" value="Update User"></br>
+        </form></td>
       </div>
     </div>
   </body>
