@@ -5,12 +5,15 @@
     <title>cohortrolodex</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
     <script src="/js/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/css/app.css">
   </head>
   <body ng-controller="RolodexController as ctrl">
     <h1>Welcome to Cohortrolodex!</h1>
 
+
+
 <!-- LOGIN FORM  -->
-  <form ng-submit="ctrl.login()">
+  <form ng-submit="ctrl.login()" ng-if="!ctrl.loggedInUser">
 
     <!-- USERNAME -->
     <input ng-model="ctrl.loginUsername" type="text" placeholder="username" required>
@@ -26,13 +29,14 @@
 <button ng-if="ctrl.loggedInUser" ng-click="ctrl.logout()" type="button" name="button">Logout</button>
 
 <!-- CREATE NEW USER FORM -->
-    <div class="creator">
+    <div class="creator" ng-if="!ctrl.loggedInUser">
       Submit user:
       <form ng-submit="ctrl.createUser()">
         <input type="text" placeholder="Username" ng-model="ctrl.createForm.username"></br>
         <input type="text" placeholder="Password" ng-model="ctrl.createForm.password"></br>
         <input type="text" placeholder="First Name" ng-model="ctrl.createForm.fName"></br>
         <input type="text" placeholder="Last Name" ng-model="ctrl.createForm.lName"></br>
+        <input type="url" ng-model="ctrl.createForm.profilePic"  placeholder="Profile image"><br>
         <input type="text" placeholder="Github" ng-model="ctrl.createForm.contact.github"></br>
         <input type="text" placeholder="Linkedin" ng-model="ctrl.createForm.contact.linkedin"></br>
         <input type="text" placeholder="Wesbite" ng-model="ctrl.createForm.contact.website"></br>
@@ -42,19 +46,23 @@
         <input type="submit" value="Create User"></br>
       </form>
     </div>
-    <div class="shower">
-      <table>
-        <tr ng-repeat="user in ctrl.users">
-          <td>{{user.fName}}</td>
-          <td>{{user.lName}}</td>
-          <td><a href="{{user.contact.github}}">{{user.contact.github}}</a></td>
-          <td> <a href="{{user.contact.linkedin}}">{{user.contact.linkedin}}</a> </td>
-          <td> <a href="{{user.contact.website}}">{{user.contact.website}}</a> </td>
-          <td ng-repeat="skill in user.skills">{{skill}}</td>
-          <td>{{user.location}}</td>
-          <td>{{user.brand}}</td>
-        </tr>
-      </table>
+    <div class="users">
+      <div class="user" ng-repeat="user in ctrl.users">
+        <img src="{{user.profilePic}}" alt="{{user.fName}}">
+        <h2>{{user.fName}} {{user.lName}}</h2>
+        <p>{{user.location}}</p>
+        <h3>Get in touch</h3>
+        <ul>
+          <li> <a href="{{user.contact.github}}" target="_blank">Github</a> </li>
+          <li> <a href="{{user.contact.linkedin}}" target="_blank">LinkedIn</a> </li>
+          <li> <a href="{{user.contact.website}}" target="_blank">Website</a> </li>
+        </ul>
+        <h3>Skills</h3>
+        <ul>
+          <li ng-repeat="skill in user.skills">{{skill}}</li>
+        </ul>
+        <p>{{user.brand}}</p>
+      </div>
     </div>
   </body>
 </html>
