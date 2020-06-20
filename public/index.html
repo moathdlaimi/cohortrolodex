@@ -22,6 +22,9 @@
     <input type="submit" name="" value="Login">
 </form>
 
+<!-- LOGOUT  -->
+<button ng-if="loggedInUser" ng-click="ctrl.logout()" type="button" name="button">Logout</button>
+
 <!-- CREATE NEW USER FORM -->
     <div class="creator">
       Submit user:
