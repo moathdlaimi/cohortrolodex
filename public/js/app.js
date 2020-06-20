@@ -60,6 +60,7 @@ app.controller("RolodexController", [
             url:'/users/' + id
         }).then((response) => {
             this.loggedInUser = false
+            this.getUsers();
         })
     }
 
