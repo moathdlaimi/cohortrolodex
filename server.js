@@ -21,14 +21,12 @@ app.use(
   })
 );
 
-app.use( function(req, res, next) {
-
-  if (req.originalUrl && req.originalUrl.split("/").pop() === 'favicon.ico') {
+app.use(function (req, res, next) {
+  if (req.originalUrl && req.originalUrl.split("/").pop() === "favicon.ico") {
     return res.sendStatus(204);
   }
 
   return next();
-
 });
 
 //=============
@@ -48,6 +46,7 @@ mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
+  useCreateIndex: true,
 });
 
 // Error / success
