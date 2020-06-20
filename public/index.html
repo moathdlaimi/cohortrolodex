@@ -18,5 +18,14 @@
         <input type="submit" value="Create User"></br>
       </form>
     </div>
+    <div class="shower">
+      <table>
+        <tr ng-repeat="user in ctrl.users">
+          <td>{{user.username}}</td>
+          <td>{{user.fName}}</td>
+          <td>{{user.lName}}</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
