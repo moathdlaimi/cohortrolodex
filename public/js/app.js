@@ -7,6 +7,12 @@ app.controller("RolodexController", [
     this.users = [];
     this.user = {};
 
+    ////
+
+    this.contact :{} 
+
+    /////
+
     this.loggedInUser = false;
 
     // ==================
