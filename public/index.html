@@ -15,6 +15,7 @@
 
     <!-- LOGIN FORM  -->
     <!-- place login form partial tag here  -->
+    <div class="" ng-include="'partials/login_form.html'"></div>
 
     <!-- LOGOUT  -->
     <button
@@ -29,12 +30,17 @@
     <!-- CREATE NEW USER FORM -->
     <div class="creator" ng-if="!ctrl.loggedInUser">
       <!-- put new user form partial tag here -->
+      <div class="" ng-include="'partials/signup_form.html'"></div>
     </div>
     <div class="users">
+      <div class="user" ng-repeat="user in ctrl.users">
       <!-- place user card partial tag here  -->
+      <div class="" ng-include="'partials/user_card.html'"></div>
 
       <!-- user edit form -->
       <!-- place user edit for partial tag here -->
+      <div class="" ng-include="'partials/edit_form.html'"></div>
+    </div>
     </div>
   </body>
 </html>
