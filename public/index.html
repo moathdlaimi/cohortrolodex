@@ -37,9 +37,9 @@
         <input type="text" placeholder="First Name" ng-model="ctrl.createForm.fName"></br>
         <input type="text" placeholder="Last Name" ng-model="ctrl.createForm.lName"></br>
         <input type="url" ng-model="ctrl.createForm.profilePic"  placeholder="Profile image"><br>
-        <input type="text" placeholder="Github" ng-model="ctrl.createForm.contact.github"></br>
-        <input type="text" placeholder="Linkedin" ng-model="ctrl.createForm.contact.linkedin"></br>
-        <input type="text" placeholder="Wesbite" ng-model="ctrl.createForm.contact.website"></br>
+        <input type="text" placeholder="Github" ng-model="ctrl.createForm.github"></br>
+        <input type="text" placeholder="Linkedin" ng-model="ctrl.createForm.linkedin"></br>
+        <input type="text" placeholder="Wesbite" ng-model="ctrl.createForm.website"></br>
         <input type="text" placeholder="Skills" ng-model="ctrl.createForm.skills"></br>
         <input type="text" placeholder="Location" ng-model="ctrl.createForm.location"></br>
         <input type="text" placeholder="Description" ng-model="ctrl.createForm.brand"></br>
@@ -53,9 +53,9 @@
         <p>{{user.location}}</p>
         <h3>Get in touch</h3>
         <ul>
-          <li> <a href="{{user.contact.github}}" target="_blank">Github</a> </li>
-          <li> <a href="{{user.contact.linkedin}}" target="_blank">LinkedIn</a> </li>
-          <li> <a href="{{user.contact.website}}" target="_blank">Website</a> </li>
+          <li> <a href="{{user.github}}" target="_blank">Github</a> </li>
+          <li> <a href="{{user.linkedin}}" target="_blank">LinkedIn</a> </li>
+          <li> <a href="{{user.website}}" target="_blank">Website</a> </li>
         </ul>
         <h3>Skills</h3>
         <ul>
@@ -75,9 +75,9 @@
         <input type="text" placeholder="First Name" ng-model="ctrl.updateForm.fName" ng-value="user.fName"></br>
         <input type="text" placeholder="Last Name" ng-model="ctrl.updateForm.lName" ng-value="user.lName"></br>
         <input type="url"  placeholder="Profile image" ng-model="ctrl.updateForm.profilePic" ng-value="user.profilePic"><br>
-        <input type="text" placeholder="Github" ng-model="ctrl.updateForm.contact.github" ng-value="user.contact.github"></br>
-        <input type="text" placeholder="Linkedin" ng-model="ctrl.updateForm.contact.linkedin" ng-value="user.contact.linkedin"></br>
-        <input type="text" placeholder="Wesbite" ng-model="ctrl.updateForm.contact.website" ng-value="user.contact.website"></br>
+        <input type="text" placeholder="Github" ng-model="ctrl.updateForm.github" ng-value="user.contact.github"></br>
+        <input type="text" placeholder="Linkedin" ng-model="ctrl.updateForm.linkedin" ng-value="user.contact.linkedin"></br>
+        <input type="text" placeholder="Wesbite" ng-model="ctrl.updateForm.website" ng-value="user.contact.website"></br>
         <input type="text" placeholder="Skills" ng-model="ctrl.updateForm.skills" ng-value="user.skills"></br>
         <input type="text" placeholder="Location" ng-model="ctrl.updateForm.location" ng-value="user.location"></br>
         <input type="text" placeholder="Description" ng-model="ctrl.updateForm.brand" ng-value="user.brand"></br>

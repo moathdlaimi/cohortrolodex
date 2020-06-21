@@ -54,6 +54,7 @@ app.controller("RolodexController", [
     //UPDATE
     //=========
     this.editUser = (id) => {
+      console.log(this.updateForm);
       $http({
         method: "PUT",
         url: "/users/" + id,
