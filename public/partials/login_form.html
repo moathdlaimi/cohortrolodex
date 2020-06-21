@@ -1,0 +1,20 @@
+<form ng-submit="ctrl.login()" ng-if="!ctrl.loggedInUser">
+  <!-- USERNAME -->
+  <input
+    ng-model="ctrl.loginUsername"
+    type="text"
+    placeholder="username"
+    required
+  />
+
+  <!-- PASSWORD -->
+  <input
+    ng-model="ctrl.loginPassword"
+    type="password"
+    placeholder="password"
+    required
+  />
+
+  <!-- LOGIN  -->
+  <input type="submit" name="" value="Login" />
+</form>

@@ -1,89 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" ng-app="RolodexApp">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>cohortrolodex</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"
+      charset="utf-8"
+    ></script>
     <script src="/js/app.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/app.css" />
   </head>
   <body ng-controller="RolodexController as ctrl">
     <h1>Welcome to Cohortrolodex!</h1>
 
+    <!-- LOGIN FORM  -->
+    <!-- place login form partial tag here  -->
 
+    <!-- LOGOUT  -->
+    <button
+      ng-if="ctrl.loggedInUser"
+      ng-click="ctrl.logout()"
+      type="button"
+      name="button"
+    >
+      Logout
+    </button>
 
-<!-- LOGIN FORM  -->
-  <form ng-submit="ctrl.login()" ng-if="!ctrl.loggedInUser">
-
-    <!-- USERNAME -->
-    <input ng-model="ctrl.loginUsername" type="text" placeholder="username" required>
-
-    <!-- PASSWORD -->
-    <input ng-model="ctrl.loginPassword" type="password" placeholder="password" required>
-
-    <!-- LOGIN  -->
-    <input type="submit" name="" value="Login">
-</form>
-
-<!-- LOGOUT  -->
-<button ng-if="ctrl.loggedInUser" ng-click="ctrl.logout()" type="button" name="button">Logout</button>
-
-<!-- CREATE NEW USER FORM -->
+    <!-- CREATE NEW USER FORM -->
     <div class="creator" ng-if="!ctrl.loggedInUser">
-      Submit user:
-      <form ng-submit="ctrl.createUser()">
-        <input type="text" placeholder="Username" ng-model="ctrl.createForm.username"></br>
-        <input type="password" placeholder="Password" ng-model="ctrl.createForm.password"></br>
-        <input type="text" placeholder="First Name" ng-model="ctrl.createForm.fName"></br>
-        <input type="text" placeholder="Last Name" ng-model="ctrl.createForm.lName"></br>
-        <input type="url"  placeholder="Profile image" ng-model="ctrl.createForm.profilePic"><br>
-        <input type="url"  placeholder="Github" ng-model="ctrl.createForm.github"></br>
-        <input type="url"  placeholder="Linkedin" ng-model="ctrl.createForm.linkedin"></br>
-        <input type="url"  placeholder="Wesbite" ng-model="ctrl.createForm.website"></br>
-        <input type="text" placeholder="Skills" ng-model="ctrl.createForm.skills"></br>
-        <input type="text" placeholder="Location" ng-model="ctrl.createForm.location"></br>
-        <input type="text" placeholder="Description" ng-model="ctrl.createForm.brand"></br>
-        <input type="submit" value="Create User"></br>
-      </form>
+      <!-- put new user form partial tag here -->
     </div>
     <div class="users">
-      <div class="user" ng-repeat="user in ctrl.users">
-        <img src="{{user.profilePic}}" alt="{{user.fName}}">
-        <h2>{{user.fName}} {{user.lName}}</h2>
-        <p>{{user.location}}</p>
-        <h3>Get in touch</h3>
-        <ul>
-          <li> <a href="{{user.github}}" target="_blank">Github</a> </li>
-          <li> <a href="{{user.linkedin}}" target="_blank">LinkedIn</a> </li>
-          <li> <a href="{{user.website}}" target="_blank">Website</a> </li>
-        </ul>
-        <h3>Skills</h3>
-        <ul>
-          <li ng-repeat="skill in user.skills">{{skill}}</li>
-        </ul>
-        <p>{{user.brand}}</p>
-        <button class="delete" ng-click= 'ctrl.deleteUser(user._id)' ng-if= 'ctrl.loggedInUser._id == user._id'>Delete</button>
-        <td>
-          <button
-          ng-if="$index !== ctrl.indexOfEditFormToShow && ctrl.loggedInUser._id == user._id"
-          ng-click="ctrl.indexOfEditFormToShow = $index">
-          Edit User
-        </button>
-        <form
-        ng-if="$index === ctrl.indexOfEditFormToShow"
-        ng-submit="ctrl.editUser(user._id)">
-        <input type="text" placeholder="First Name" ng-model="ctrl.updateForm.fName" ng-value="user.fName"></br>
-        <input type="text" placeholder="Last Name" ng-model="ctrl.updateForm.lName" ng-value="user.lName"></br>
-        <input type="url"  placeholder="Profile image" ng-model="ctrl.updateForm.profilePic" ng-value="user.profilePic"><br>
-        <input type="url"  placeholder="Github" ng-model="ctrl.updateForm.github" ng-value="user.github"></br>
-        <input type="url"  placeholder="Linkedin" ng-model="ctrl.updateForm.linkedin" ng-value="user.linkedin"></br>
-        <input type="url"  placeholder="Wesbite" ng-model="ctrl.updateForm.website" ng-value="user.website"></br>
-        <input type="text" placeholder="Skills" ng-model="ctrl.updateForm.skills" ng-value="user.skills"></br>
-        <input type="text" placeholder="Location" ng-model="ctrl.updateForm.location" ng-value="user.location"></br>
-        <input type="text" placeholder="Description" ng-model="ctrl.updateForm.brand" ng-value="user.brand"></br>
-        <input type="submit" value="Update User"></br>
-        </form></td>
-      </div>
+      <!-- place user card partial tag here  -->
+
+      <!-- user edit form -->
+      <!-- place user edit for partial tag here -->
     </div>
   </body>
 </html>
