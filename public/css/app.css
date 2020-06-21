@@ -1,7 +1,15 @@
+.users {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 2em;
+}
+
 .user {
-  width: 400px;
 }
 
 .user img {
-  width: 100%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
 }

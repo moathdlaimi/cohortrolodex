@@ -60,6 +60,8 @@ app.controller("RolodexController", [
         data: this.updateForm,
       }).then(
         (response) => {
+          console.log(response.data);
+          this.indexOfEditFormToShow = null;
           this.updateForm = {};
           // this.loggedInUser = response.data;
           this.getUsers();
