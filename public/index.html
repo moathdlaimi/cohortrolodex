@@ -8,16 +8,51 @@
       charset="utf-8"
     ></script>
     <script src="/js/app.js" charset="utf-8"></script>
+    <script
+      src="https://kit.fontawesome.com/4b72f81b1d.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/forms.css" />
   </head>
   <body ng-controller="RolodexController as ctrl">
-    <h1>Welcome to Cohortrolodex!</h1>
+    <div
+      class="welcome"
+      ng-if="!ctrl.loggedInUser && !ctrl.showLoginForm && !ctrl.showSignupForm"
+    >
+      <h1 class="welcome-heading">
+        Welcome to the PJ pants Cohort Rolodex.
+      </h1>
+      <a ng-click="ctrl.goToUsers()" href="">
+        <p>View cohort profiles</p>
+        <i class="fas fa-chevron-circle-down"></i>
+      </a>
+      <div class="login-signup-btn">
+        <button
+          ng-click="ctrl.showLoginForm = !ctrl.showLoginForm"
+          type="button"
+          name="button"
+        >
+          Login
+        </button>
+        <button
+          ng-click="ctrl.showSignupForm = !ctrl.showSignupForm"
+          type="button"
+          name="button"
+        >
+          Signup
+        </button>
+      </div>
+    </div>
 
     <!-- LOGIN FORM  -->
-    <!-- place login form partial tag here  -->
 
-    <div class="login-form" ng-include="'partials/login_form.html'"></div>
+    <div
+      class="login-form"
+      ng-include="'partials/login_form.html'"
+      ng-if="ctrl.showLoginForm"
+    ></div>
 
 
     <!-- LOGOUT  -->
@@ -31,19 +66,19 @@
     </button>
 
     <!-- CREATE NEW USER FORM -->
-    <div class="creator" ng-if="!ctrl.loggedInUser">
+    <div class="signup-form" ng-if="!ctrl.loggedInUser && ctrl.showSignupForm">
       <!-- put new user form partial tag here -->
       <div class="" ng-include="'partials/signup_form.html'"></div>
     </div>
-    <div class="users">
+    <div class="users" id="users">
       <div class="user" ng-repeat="user in ctrl.users">
-      <!-- place user card partial tag here  -->
-      <div class="" ng-include="'partials/user_card.html'"></div>
+        <!-- place user card partial tag here  -->
+        <div class="" ng-include="'partials/user_card.html'"></div>
 
-      <!-- user edit form -->
-      <!-- place user edit for partial tag here -->
-      <div class="" ng-include="'partials/edit_form.html'"></div>
-    </div>
+        <!-- user edit form -->
+        <!-- place user edit for partial tag here -->
+        <div class="" ng-include="'partials/edit_form.html'"></div>
+      </div>
     </div>
   </body>
 </html>
