@@ -2,10 +2,15 @@ const app = angular.module("RolodexApp", []);
 
 app.controller("RolodexController", [
   "$http",
-  function ($http) {
+  "$location",
+  "$anchorScroll",
+  function ($http, $location, $anchorScroll) {
     this.createUser = {};
     this.users = [];
     this.user = {};
+
+    this.showLoginForm = false;
+    this.showSignupForm = false;
 
     this.loggedInUser = false;
 
@@ -124,6 +129,17 @@ app.controller("RolodexController", [
       }).then((response) => {
         this.loggedInUser = false;
       });
+    };
+
+    //scroll test
+    this.goToUsers = () => {
+      console.log("helloe");
+      // set the location.hash to the id of
+      // the element you wish to scroll to.
+      $location.hash("users");
+
+      // call $anchorScroll()
+      $anchorScroll();
     };
   },
 ]); ////
