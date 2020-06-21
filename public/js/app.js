@@ -49,6 +49,7 @@ app.controller("RolodexController", [
       }).then((response) => {
         if (response.data.username) {
           this.loggedInUser = response.data;
+          this.showLoginForm = false;
         } else {
           this.loginUsername = null;
           this.loginPassword = null;
