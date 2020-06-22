@@ -24,7 +24,10 @@
   <input id="createBtn" type="submit" value="Create User">
 </form>
 <hr>
-<p class="login-signup-link">Already have an account ? <a href="#">Log In</a></p>
+<p class="login-signup-link">Already have an account ? <a
+  href="#"
+  ng-click="ctrl.showLoginForm = !ctrl.showLoginForm;ctrl.showSignupForm = !ctrl.showSignupForm"
+  >Log In</a></p>
 
 </div>
 <!-- </div> -->

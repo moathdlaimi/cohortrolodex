@@ -40,18 +40,20 @@
   </ul>
 
   <!-- edit/delete controls -->
-  <button
-    class="delete"
-    ng-click="ctrl.deleteUser(user._id)"
-    ng-if="ctrl.loggedInUser._id == user._id"
-  >
-    Delete
-  </button>
+  <div class="userEdit">
+    <button
+      class="delete"
+      ng-click="ctrl.deleteUser(user._id)"
+      ng-if="ctrl.loggedInUser._id == user._id"
+    >
+      <i class="fas fa-trash"></i>
+    </button>
 
-  <button
-    ng-if="$index !== ctrl.indexOfEditFormToShow && ctrl.loggedInUser._id == user._id"
-    ng-click="ctrl.indexOfEditFormToShow = $index"
-  >
-    Edit User
-  </button>
+    <button
+      ng-if="$index !== ctrl.indexOfEditFormToShow && ctrl.loggedInUser._id == user._id"
+      ng-click="ctrl.indexOfEditFormToShow = $index"
+    >
+      <i class="fas fa-pencil-alt"></i>
+    </button>
+  </div>
 </div>
