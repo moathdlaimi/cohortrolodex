@@ -28,6 +28,8 @@ app.controller("RolodexController", [
         (response) => {
           this.createForm = {};
           this.users.unshift(response.data);
+          this.loggedInUser = response.data;
+          this.showSignupForm = false;
         },
         (error) => {
           console.log(error);
@@ -86,7 +88,9 @@ app.controller("RolodexController", [
         method: "DELETE",
         url: "/users/" + id,
       }).then((response) => {
-        this.loggedInUser = false;
+        console.log(this.loggedInUser._id,id);
+        if(this.loggedInUser._id == id){
+          this.loggedInUser = false};
         this.getUsers();
       });
     };

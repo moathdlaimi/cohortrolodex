@@ -6,20 +6,22 @@
   <h2>{{user.fName}} {{user.lName}}</h2>
 
   <!-- location -->
-  <p>{{user.location}}</p>
+  <p class="user-location">{{user.location}}</p>
 
   <!-- brand statement  -->
-  <p>{{user.brand}}</p>
+  <p class="user-brand">{{user.brand}}</p>
 
   <!-- skills -->
-  <h3>Skills</h3>
-  <ul>
+
+  <ul class="user-skills">
+    <h3>Skills:</h3>
     <li ng-repeat="skill in user.skills">{{skill}}</li>
   </ul>
 
   <!-- contact -->
-  <h3>Keep in touch</h3>
+
   <ul class="contact">
+    <h3>Keep in touch</h3>
     <li>
       <a href="{{user.github}}" target="_blank"
         ><i class="fab fa-github"></i
@@ -38,18 +40,20 @@
   </ul>
 
   <!-- edit/delete controls -->
-  <button
-    class="delete"
-    ng-click="ctrl.deleteUser(user._id)"
-    ng-if="ctrl.loggedInUser._id == user._id"
-  >
-    Delete
-  </button>
+  <div class="user-edit">
+    <button
+      class="delete"
+      ng-click="ctrl.deleteUser(user._id)"
+      ng-if="ctrl.loggedInUser._id == user._id || ctrl.loggedInUser.userRole == 'Admin'"
+    >
+      <i class="fas fa-trash"></i>
+    </button>
 
-  <button
-    ng-if="$index !== ctrl.indexOfEditFormToShow && ctrl.loggedInUser._id == user._id"
-    ng-click="ctrl.indexOfEditFormToShow = $index"
-  >
-    Edit User
-  </button>
+    <button
+      ng-if="$index !== ctrl.indexOfEditFormToShow && ctrl.loggedInUser._id == user._id || ctrl.loggedInUser.userRole == 'Admin'"
+      ng-click="ctrl.indexOfEditFormToShow = $index"
+    >
+      <i class="fas fa-pencil-alt"></i>
+    </button>
+  </div>
 </div>

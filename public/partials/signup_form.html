@@ -1,28 +1,28 @@
 
 
-<div class="forms-container">
-
 <form class="signup-form" ng-submit="ctrl.createUser()">
+  <button ng-click="ctrl.showSignupForm = !ctrl.showSignupForm" class="xBtn" type="button" name="button">X</button>
   <img class="logo-img" src="images/login-img.png" alt="">
 
   <fieldset>
 
-  <input class="signup-inputs must" type="text" placeholder="Username" ng-model="ctrl.createForm.username"></br>
-  <input class="signup-inputs must" type="password" placeholder="Password" ng-model="ctrl.createForm.password"></br>
-  <input class="signup-inputs must" type="text" placeholder="First Name" ng-model="ctrl.createForm.fName"></br>
-  <input class="signup-inputs must" type="text" placeholder="Last Name" ng-model="ctrl.createForm.lName"></br>
-  <input class="signup-inputs must" type="url"  placeholder="Profile image" ng-model="ctrl.createForm.profilePic"><br>
+  <input class="signup-inputs must" type="text" placeholder="Username" ng-model="ctrl.createForm.username" required></br>
+  <input class="signup-inputs must" type="password" placeholder="Password" ng-model="ctrl.createForm.password" required></br>
+  <input class="signup-inputs must" type="text" placeholder="First Name" ng-model="ctrl.createForm.fName" required></br>
+  <input class="signup-inputs must" type="text" placeholder="Last Name" ng-model="ctrl.createForm.lName" required></br>
+  <input class="signup-inputs must" type="url"  placeholder="Profile image" ng-model="ctrl.createForm.profilePic" required><br>
   <input class="signup-inputs" type="url"  placeholder="Github" ng-model="ctrl.createForm.github"></br>
   <input class="signup-inputs" type="url"  placeholder="Linkedin" ng-model="ctrl.createForm.linkedin"></br>
   <input class="signup-inputs" type="url"  placeholder="Wesbite" ng-model="ctrl.createForm.website"></br>
   <input class="signup-inputs" type="text" placeholder="Skills" ng-model="ctrl.createForm.skills"></br>
   <input class="signup-inputs" type="text" placeholder="Location" ng-model="ctrl.createForm.location"></br>
-  <input class="signup-inputs" type="text" placeholder="Description" ng-model="ctrl.createForm.brand"></br>
+  <textarea class="signup-inputs" type="text" placeholder="Max 250 Characters" ng-model="ctrl.createForm.brand" maxlength="250"> </textarea></br>
   </fieldset>
 
   <input id="createBtn" type="submit" value="Create User">
 </form>
 <hr>
-<p class="signup-link">Already have an account ? <a href="#">Log In</a></p>
-
-</div>
+<p class="login-signup-link">Already have an account ? <a
+  href="#"
+  ng-click="ctrl.showLoginForm = !ctrl.showLoginForm;ctrl.showSignupForm = !ctrl.showSignupForm"
+  >Log In</a></p>
