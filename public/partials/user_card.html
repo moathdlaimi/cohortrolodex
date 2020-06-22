@@ -1,14 +1,24 @@
 <div class="user-card">
+  <!-- profile image -->
   <img src="{{user.profilePic}}" alt="{{user.fName}}" />
+
+  <!-- name -->
   <h2>{{user.fName}} {{user.lName}}</h2>
+
+  <!-- location -->
   <p>{{user.location}}</p>
+
+  <!-- brand statement  -->
+  <p>{{user.brand}}</p>
+
+  <!-- skills -->
   <h3>Skills</h3>
   <ul>
     <li ng-repeat="skill in user.skills">{{skill}}</li>
   </ul>
-  <p>{{user.brand}}</p>
 
-  <h3>Get in touch</h3>
+  <!-- contact -->
+  <h3>Keep in touch</h3>
   <ul class="contact">
     <li>
       <a href="{{user.github}}" target="_blank"
@@ -27,6 +37,7 @@
     </li>
   </ul>
 
+  <!-- edit/delete controls -->
   <button
     class="delete"
     ng-click="ctrl.deleteUser(user._id)"

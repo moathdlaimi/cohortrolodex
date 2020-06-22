@@ -65,7 +65,7 @@
     </button>
 
     <!-- CREATE NEW USER FORM -->
-    <div class="signup-form" ng-if="!ctrl.loggedInUser && ctrl.showSignupForm">
+    <div ng-if="!ctrl.loggedInUser && ctrl.showSignupForm">
       <!-- put new user form partial tag here -->
       <div class="" ng-include="'partials/signup_form.html'"></div>
     </div>

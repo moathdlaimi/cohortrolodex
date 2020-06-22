@@ -1,15 +1,15 @@
 
-<div class="login-container">
+<div class="forms-container">
 
 <form class="login-form" ng-submit="ctrl.login()" ng-if="!ctrl.loggedInUser">
-
-  <img id="login-img" src="images/login-img.png" alt="">
+<button ng-click="ctrl.showLoginForm = !ctrl.showLoginForm" class="xBtn" type="button" name="button">X</button>
+  <img class="logo-img" src="images/login-img.png" alt="">
   <fieldset>
 
 
   <!-- USERNAME -->
   <input
-    class="login-input"
+    class="login-inputs"
     ng-model="ctrl.loginUsername"
     type="text"
     placeholder="username"
@@ -18,7 +18,7 @@
 
   <!-- PASSWORD -->
   <input
-    class="login-input"
+    class="login-inputs"
     ng-model="ctrl.loginPassword"
     type="password"
     placeholder="password"
@@ -31,5 +31,5 @@
   <input id="loginBtn" type="submit" name="" value="Sign in" />
 </form>
  <hr>
- <p class="signup-login-link">You don't have an account ? <a href="#">Sign Up</a></p>
+ <p class="signup-link">You don't have an account ? <a href="#">Sign Up</a></p>
 </div>
