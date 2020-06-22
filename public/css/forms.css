@@ -1,6 +1,9 @@
 
 /* SHARED STYLING BETWEEN ALL FORMS */
 /* ==================================== */
+/* ==================================== */
+/* ==================================== */
+
 /* .forms-main-container{
   display: flex;
   flex-direction: column;
@@ -53,8 +56,11 @@ hr{
 }
 
 /* ==================================== */
+/* ==================================== */
 /* LOG-IN FORM */
 /* ==================================== */
+/* ==================================== */
+
 .login-form {
   width: 50%;
   margin: 25px 0 50px 0 ;
@@ -101,9 +107,10 @@ hr{
 }
 
 
-
+/* ==================================== */
 /* ==================================== */
 /* SIGN-UP FORM */
+/* ==================================== */
 /* ==================================== */
 
 .signup-form {
@@ -146,4 +153,65 @@ hr{
   border-radius: 50px;
   font-size: 18px;
 
+}
+
+/* ==================================== */
+/* ==================================== */
+/* UPDATE FORM */
+/* ==================================== */
+/* ==================================== */
+
+
+
+
+
+.edit-inputs {
+  text-align: center;
+  width: 40%;
+  margin: 10px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid black;
+  color: black;
+  font-size: 20px;
+}
+
+.edit-inputs:focus{
+  border-bottom: 2px solid #c2c2c2;
+  outline: none;
+  transform: scale(1.2);
+  color: black;
+}
+
+.updateBtn{
+  padding: 7px;
+  background-color: white;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.updateBtn:hover{
+background-color: #c2c2c2;
+}
+
+.cancelBtn{
+  padding: 7px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.cancelBtn:hover{
+background-color: #c2c2c2;
+}
+
+textarea{
+  max-width: 400px;
+  max-height: 150px;
+}
+
+textarea:focus{
+  border-bottom:#c2c2c2;
 }
