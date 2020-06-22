@@ -21,14 +21,12 @@ app.use(
   })
 );
 
-app.use( function(req, res, next) {
-
-  if (req.originalUrl && req.originalUrl.split("/").pop() === 'favicon.ico') {
+app.use(function (req, res, next) {
+  if (req.originalUrl && req.originalUrl.split("/").pop() === "favicon.ico") {
     return res.sendStatus(204);
   }
 
   return next();
-
 });
 
 //=============
@@ -36,6 +34,8 @@ app.use( function(req, res, next) {
 //=============
 const usersController = require("./controllers/users.js");
 app.use("/users", usersController);
+const sessionController = require("./controllers/session.js");
+app.use("/session", sessionController);
 
 //=====================
 //MONGOOSE AND MONGODB
@@ -48,6 +48,7 @@ mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
+  useCreateIndex: true,
 });
 
 // Error / success

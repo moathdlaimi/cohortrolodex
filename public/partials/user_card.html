@@ -1,0 +1,55 @@
+<div class="user-card">
+  <!-- profile image -->
+  <img src="{{user.profilePic}}" alt="{{user.fName}}" />
+
+  <!-- name -->
+  <h2>{{user.fName}} {{user.lName}}</h2>
+
+  <!-- location -->
+  <p>{{user.location}}</p>
+
+  <!-- brand statement  -->
+  <p>{{user.brand}}</p>
+
+  <!-- skills -->
+  <h3>Skills</h3>
+  <ul>
+    <li ng-repeat="skill in user.skills">{{skill}}</li>
+  </ul>
+
+  <!-- contact -->
+  <h3>Keep in touch</h3>
+  <ul class="contact">
+    <li>
+      <a href="{{user.github}}" target="_blank"
+        ><i class="fab fa-github"></i
+      ></a>
+    </li>
+    <li>
+      <a href="{{user.linkedin}}" target="_blank"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+    </li>
+    <li>
+      <a href="{{user.website}}" target="_blank"
+        ><i class="fas fa-globe"></i
+      ></a>
+    </li>
+  </ul>
+
+  <!-- edit/delete controls -->
+  <button
+    class="delete"
+    ng-click="ctrl.deleteUser(user._id)"
+    ng-if="ctrl.loggedInUser._id == user._id"
+  >
+    Delete
+  </button>
+
+  <button
+    ng-if="$index !== ctrl.indexOfEditFormToShow && ctrl.loggedInUser._id == user._id"
+    ng-click="ctrl.indexOfEditFormToShow = $index"
+  >
+    Edit User
+  </button>
+</div>
