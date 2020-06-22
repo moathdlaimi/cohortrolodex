@@ -1,6 +1,4 @@
 
-<!-- <div class="forms-main-container"> -->
-<div class="forms-container">
 
 <form class="signup-form" ng-submit="ctrl.createUser()">
   <button ng-click="ctrl.showSignupForm = !ctrl.showSignupForm" class="xBtn" type="button" name="button">X</button>
@@ -24,7 +22,7 @@
   <input id="createBtn" type="submit" value="Create User">
 </form>
 <hr>
-<p class="login-signup-link">Already have an account ? <a href="#">Log In</a></p>
-
-</div>
-<!-- </div> -->
+<p class="login-signup-link">Already have an account ? <a
+  href="#"
+  ng-click="ctrl.showLoginForm = !ctrl.showLoginForm;ctrl.showSignupForm = !ctrl.showSignupForm"
+  >Log In</a></p>
