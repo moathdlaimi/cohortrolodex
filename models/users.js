@@ -13,6 +13,7 @@ const userSchema = new Schema({
   skills: [{ type: String }],
   location: String,
   brand: String,
+  userRole: {type: String, default: 'User'}
 });
 
 const Users = mongoose.model("user", userSchema);
