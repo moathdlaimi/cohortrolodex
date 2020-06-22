@@ -17,7 +17,10 @@
     <link rel="stylesheet" href="/css/forms.css" />
   </head>
   <body ng-controller="RolodexController as ctrl">
-    <div class="login-signup-btn">
+    <div
+      class="login-signup-btn"
+      ng-if="!ctrl.showLoginForm && !ctrl.showSignupForm"
+    >
       <button
         ng-click="ctrl.showLoginForm = !ctrl.showLoginForm"
         type="button"
@@ -55,7 +58,6 @@
         <p>View cohort profiles</p>
         <i class="fas fa-chevron-circle-down"></i>
       </a>
-
     </div>
 
     <!-- LOGIN FORM  -->
@@ -65,15 +67,16 @@
       ng-if="ctrl.showLoginForm"
     ></div>
 
-
-
-
     <!-- CREATE NEW USER FORM -->
     <div ng-if="!ctrl.loggedInUser && ctrl.showSignupForm">
       <!-- put new user form partial tag here -->
       <div class="" ng-include="'partials/signup_form.html'"></div>
     </div>
-    <div class="users" id="users" ng-if="!ctrl.showLoginForm && !ctrl.showSignupForm">
+    <div
+      class="users"
+      id="users"
+      ng-if="!ctrl.showLoginForm && !ctrl.showSignupForm"
+    >
       <div class="user" ng-repeat="user in ctrl.users">
         <!-- place user card partial tag here  -->
         <div class="" ng-include="'partials/user_card.html'"></div>
@@ -83,6 +86,5 @@
         <div class="" ng-include="'partials/edit_form.html'"></div>
       </div>
     </div>
-
   </body>
 </html>
