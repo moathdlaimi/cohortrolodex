@@ -61,6 +61,12 @@ html {
 }
 
 .users {
+<<<<<<< HEAD
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 2em;
+
+=======
   padding: 10vh 40px 0 40px;
   text-align: center;
   width: 100%;
@@ -68,6 +74,7 @@ html {
 
 .users ul {
   list-style: none;
+>>>>>>> deb8ebcd0cfc53e46a181f801e95e2f3b15ac309
 }
 
 .user-card {
