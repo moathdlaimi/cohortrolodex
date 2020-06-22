@@ -11,28 +11,44 @@
     <link rel="stylesheet" href="/css/app.css" />
   </head>
   <body ng-controller="RolodexController as ctrl">
-    <h1>Welcome to Cohortrolodex!</h1>
+    <div class="loginPage" id="login">
+      <!-- LOGIN FORM  -->
+      <!-- place login form partial tag here  -->
+      <div class="" ng-include="'partials/login_form.html'"></div>
+      <!-- LOGOUT  -->
+      <button
+        ng-if="ctrl.loggedInUser"
+        ng-click="ctrl.logout()"
+        type="button"
+        name="button"
+      >
+        Logout
+      </button>
+      <a href="#users">Jump to users</a>
+    </div>
 
-    <!-- LOGIN FORM  -->
-    <!-- place login form partial tag here  -->
-    <div class="" ng-include="'partials/login_form.html'"></div>
+    <div class="welcome" id="welcome">
+      <h1>Welcome to Cohortrolodex!</h1>
+      <a href="#users">Jump to users</a>
+      <a href="#login">login</a>
+      <a href="#signUp">sign up</a>
+    </div>
 
-    <!-- LOGOUT  -->
-    <button
-      ng-if="ctrl.loggedInUser"
-      ng-click="ctrl.logout()"
-      type="button"
-      name="button"
-    >
-      Logout
-    </button>
+    <div class="footer" id="footer">
+      <a href="#users">Jump to users</a>
+      <a href="#login">login</a>
+      <a href="#signUp">sign up</a>
+    </div>
+
+
+
 
     <!-- CREATE NEW USER FORM -->
-    <div class="creator" ng-if="!ctrl.loggedInUser">
+    <div class="creator" ng-if="!ctrl.loggedInUser" id="signUp">
       <!-- put new user form partial tag here -->
       <div class="" ng-include="'partials/signup_form.html'"></div>
     </div>
-    <div class="users">
+    <div class="users" id="users">
       <div class="user" ng-repeat="user in ctrl.users">
       <!-- place user card partial tag here  -->
       <div class="" ng-include="'partials/user_card.html'"></div>
