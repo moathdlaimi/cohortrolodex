@@ -62,7 +62,6 @@ html {
 
 .users {
   padding: 10vh 40px 0 40px;
-
   text-align: center;
   width: 100%;
 }
@@ -71,18 +70,27 @@ html {
   list-style: none;
 }
 
-.user {
-  background: black;
-  color: white;
+.user-card {
+  display: grid;
+  grid-gap: 0.5em;
+  background: #eee;
+  color: black;
   margin-bottom: 100px;
   padding: 90px;
+  box-shadow: 3px 3px 10px lightgrey;
+  border-radius: 10px;
 }
 
-.user img {
+.user-card img {
   width: 300px;
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
+  margin: 0 auto;
+}
+
+.user-card h2 {
+  font-weight: 400;
 }
 
 .contact {
@@ -94,4 +102,39 @@ html {
 
 .contact li {
   margin: 0 20px;
+}
+
+/* media queries */
+@media only screen and (max-width: 800px) {
+  .users {
+    display: grid;
+    grid-gap: 4em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .user-card {
+    padding: 20px;
+  }
+
+  .user-card h2 {
+    font-size: ;
+  }
+
+  .user-card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact li {
+    font-size: 30px;
+  }
+
+  .contact li a {
+    color: #0064759e;
+    transition: all 0.3s ease;
+  }
+
+  .contact li a:hover {
+    color: grey;
+  }
 }
