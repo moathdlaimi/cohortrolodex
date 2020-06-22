@@ -1,6 +1,13 @@
 
 /* SHARED STYLING BETWEEN ALL FORMS */
 /* ==================================== */
+/* .forms-main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
 .forms-container {
   display: flex;
   flex-direction: column;
