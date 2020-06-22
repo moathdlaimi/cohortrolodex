@@ -1,4 +1,7 @@
-.login-container {
+
+/* SHARED STYLING BETWEEN ALL FORMS */
+/* ==================================== */
+.forms-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,7 +9,6 @@
   width: 100%;
   height: 100vh;
   background: black;
-  border-radius: 10px;
   padding: 15px;
   box-sizing: border-box;
   overflow: auto;
@@ -14,19 +16,39 @@
 
 }
 
+fieldset {
+  border: 0;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+
+.logo-img {
+  background-color: white;
+  border-radius: 50%;
+  margin: 25px 0;
+}
+
+
+hr{
+  width: 75%;
+  border: 1px solid silver;
+}
+
+/* ==================================== */
+/* LOG-IN FORM */
+/* ==================================== */
 .login-form {
   width: 50%;
   margin: 25px 0 50px 0 ;
 }
 
-.login-form ::placeholder {
-  color: silver;
-  font-size: 18px;
+.login-inputs::placeholder {
+  color: white;
+  font-size: 25px;
 }
 
-
-
-.login-input {
+.login-inputs {
   text-align: center;
   width: 70%;
   margin: 10px 0;
@@ -36,23 +58,19 @@
   border: 0;
   border-bottom: 1px solid silver;
   color: white;
+  font-size: 20px;
 }
 
-
-fieldset {
-  border: 0;
-  padding: 20px;
-  margin: 20px 0;
+.login-inputs:focus{
+  border-bottom: 2px solid white;
+  outline: none;
 }
 
-hr{
-  width: 90%;
-  border: 1px solid silver;
-}
-.signup-login-link {
+/* this is inside login page */
+.signup-link {
   color: silver;
 }
-.signup-login-link a {
+.signup-link a {
   color: white;
   font-size: 18px;
   text-decoration: none;
@@ -65,8 +83,50 @@ hr{
   font-size: 18px;
 }
 
-#login-img {
-  background-color: white;
-  border-radius: 50%;
-  margin: 25px 0;
+
+
+/* ==================================== */
+/* SIGN-UP FORM */
+/* ==================================== */
+
+.signup-form {
+  width: 50%;
+  margin: 25px 0 50px 0 ;
+}
+
+.signup-inputs::placeholder {
+  color: silver;
+  font-size: 25px;
+}
+
+
+.signup-inputs {
+  text-align: center;
+  width: 70%;
+  margin: 10px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: black;
+  border: 0;
+  border-bottom: 1px solid silver;
+  color: white;
+  font-size: 20px;
+}
+
+.signup-inputs:focus{
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+
+.must::placeholder{
+  color: white;
+}
+
+#createBtn {
+  width: 35%;
+  height: 45px;
+  border-radius: 50px;
+  font-size: 18px;
+
 }
