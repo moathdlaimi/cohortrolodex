@@ -69,7 +69,7 @@
       <!-- put new user form partial tag here -->
       <div class="" ng-include="'partials/signup_form.html'"></div>
     </div>
-    <div class="users" id="users">
+    <div class="users" id="users" ng-if="!ctrl.showLoginForm && !ctrl.showSignupForm">
       <div class="user" ng-repeat="user in ctrl.users">
         <!-- place user card partial tag here  -->
         <div class="" ng-include="'partials/user_card.html'"></div>
