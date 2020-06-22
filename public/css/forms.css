@@ -35,6 +35,16 @@ hr{
   border: 1px solid silver;
 }
 
+.xBtn{
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+  margin-right: 2px;
+}
+
 /* ==================================== */
 /* LOG-IN FORM */
 /* ==================================== */
