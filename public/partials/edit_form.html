@@ -16,7 +16,7 @@ ng-submit="ctrl.editUser(user._id)">
 <input class="edit-inputs" type="url"  placeholder="Wesbite" ng-model="ctrl.updateForm.website" ng-value="user.website"></br>
 <input class="edit-inputs" type="text" placeholder="Skills" ng-model="ctrl.updateForm.skills" ng-value="user.skills"></br>
 <input class="edit-inputs" type="text" placeholder="Location" ng-model="ctrl.updateForm.location" ng-value="user.location"></br>
-<textarea class="edit-inputs" type="textarea" placeholder="Description" ng-model="ctrl.updateForm.brand" ng-value="user.brand"></textarea></br>
+<textarea class="edit-inputs" type="textarea" placeholder="Max 250 Characters" ng-model="ctrl.updateForm.brand" ng-value="user.brand" maxlength="250"></textarea></br>
 
 </fieldset>
 
