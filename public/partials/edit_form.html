@@ -8,9 +8,9 @@ ng-submit="ctrl.editUser(user._id)">
 
 <fieldset>
 
-<input class="edit-inputs" type="text" placeholder="First Name" ng-model="ctrl.updateForm.fName" ng-value="user.fName"></br>
-<input class="edit-inputs" type="text" placeholder="Last Name" ng-model="ctrl.updateForm.lName" ng-value="user.lName"></br>
-<input class="edit-inputs" type="url"  placeholder="Profile image" ng-model="ctrl.updateForm.profilePic" ng-value="user.profilePic"><br>
+<input class="edit-inputs" type="text" placeholder="First Name" ng-model="ctrl.updateForm.fName" ng-value="user.fName" required></br>
+<input class="edit-inputs" type="text" placeholder="Last Name" ng-model="ctrl.updateForm.lName" ng-value="user.lName" required></br>
+<input class="edit-inputs" type="url"  placeholder="Profile image" ng-model="ctrl.updateForm.profilePic" ng-value="user.profilePic" required><br>
 <input class="edit-inputs" type="url"  placeholder="Github" ng-model="ctrl.updateForm.github" ng-value="user.github"></br>
 <input class="edit-inputs" type="url"  placeholder="Linkedin" ng-model="ctrl.updateForm.linkedin" ng-value="user.linkedin"></br>
 <input class="edit-inputs" type="url"  placeholder="Wesbite" ng-model="ctrl.updateForm.website" ng-value="user.website"></br>
