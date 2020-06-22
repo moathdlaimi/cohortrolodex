@@ -17,6 +17,22 @@
     <link rel="stylesheet" href="/css/forms.css" />
   </head>
   <body ng-controller="RolodexController as ctrl">
+    <div class="login-signup-btn">
+      <button
+        ng-click="ctrl.showLoginForm = !ctrl.showLoginForm"
+        type="button"
+        name="button"
+      >
+        Login
+      </button>
+      <button
+        ng-click="ctrl.showSignupForm = !ctrl.showSignupForm"
+        type="button"
+        name="button"
+      >
+        Signup
+      </button>
+    </div>
     <div
       class="welcome"
       ng-if="!ctrl.loggedInUser && !ctrl.showLoginForm && !ctrl.showSignupForm"
@@ -28,22 +44,7 @@
         <p>View cohort profiles</p>
         <i class="fas fa-chevron-circle-down"></i>
       </a>
-      <div class="login-signup-btn">
-        <button
-          ng-click="ctrl.showLoginForm = !ctrl.showLoginForm"
-          type="button"
-          name="button"
-        >
-          Login
-        </button>
-        <button
-          ng-click="ctrl.showSignupForm = !ctrl.showSignupForm"
-          type="button"
-          name="button"
-        >
-          Signup
-        </button>
-      </div>
+
     </div>
 
     <!-- LOGIN FORM  -->
