@@ -55,6 +55,17 @@ hr{
   margin-right: 2px;
 }
 
+
+.login-signup-link {
+  color: silver;
+  font-size: 20px;
+}
+.login-signup-link a {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+}
+
 /* ==================================== */
 /* ==================================== */
 /* LOG-IN FORM */
@@ -89,15 +100,7 @@ hr{
   outline: none;
 }
 
-/* this is inside login page */
-.signup-link {
-  color: silver;
-}
-.signup-link a {
-  color: white;
-  font-size: 18px;
-  text-decoration: none;
-}
+
 
 #loginBtn{
   width: 35%;
