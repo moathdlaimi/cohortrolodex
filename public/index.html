@@ -22,6 +22,7 @@
         ng-click="ctrl.showLoginForm = !ctrl.showLoginForm"
         type="button"
         name="button"
+        ng-if="!ctrl.loggedInUser"
       >
         Login
       </button>
@@ -29,8 +30,18 @@
         ng-click="ctrl.showSignupForm = !ctrl.showSignupForm"
         type="button"
         name="button"
+        ng-if="!ctrl.loggedInUser"
       >
         Signup
+      </button>
+      <!-- LOGOUT  -->
+      <button
+        ng-if="ctrl.loggedInUser"
+        ng-click="ctrl.logout()"
+        type="button"
+        name="button"
+      >
+        Logout
       </button>
     </div>
     <div
@@ -55,15 +66,7 @@
     ></div>
 
 
-    <!-- LOGOUT  -->
-    <button
-      ng-if="ctrl.loggedInUser"
-      ng-click="ctrl.logout()"
-      type="button"
-      name="button"
-    >
-      Logout
-    </button>
+
 
     <!-- CREATE NEW USER FORM -->
     <div ng-if="!ctrl.loggedInUser && ctrl.showSignupForm">
