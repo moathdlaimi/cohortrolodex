@@ -28,6 +28,8 @@ app.controller("RolodexController", [
         (response) => {
           this.createForm = {};
           this.users.unshift(response.data);
+          this.loggedInUser = response.data;
+          this.showSignupForm = false;
         },
         (error) => {
           console.log(error);
