@@ -11,105 +11,148 @@ html {
   font-family: "Oswald", sans-serif;
 }
 
-/* LOGIN/SIGNUP BAR */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
 
-.login-signup-btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: black;
-  height: 10vh;
-}
+  /* LOGIN/SIGNUP BAR */
 
-.login-signup-btn button {
-  width: 100px;
-  font-size: 1.4em;
-  padding: 5px;
-  background: transparent;
-  color: white;
-  border: none;
-  font-weight: 200;
-}
+  .login-signup-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    height: 10vh;
+  }
 
-/* WECLOME */
+  .login-signup-btn button {
+    width: 100px;
+    font-size: 3em;
+    padding: 5px;
+    background: transparent;
+    color: white;
+    border: none;
+    font-weight: 200;
+  }
 
-.welcome {
-  padding-top: 20vh;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: black;
-  color: white;
-}
+  /* WECLOME */
 
-.welcome-heading {
-  padding: 0.5em;
-  font-weight: 400;
-  font-size: 130px;
-  text-align: center;
-}
+  .welcome {
+    padding-top: 20vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    color: white;
+  }
 
-.welcome a {
-  text-align: center;
-  padding-bottom: 30vh;
-  color: white;
-  font-size: 1.3em;
-}
+  .welcome-heading {
+    padding: 0.5em;
+    font-weight: 400;
+    font-size: 130px;
+    text-align: center;
+  }
 
-.users {
-  padding: 10vh 40px 0 40px;
-  text-align: center;
-  width: 100%;
-}
+  .welcome a {
+    text-align: center;
+    padding-bottom: 30vh;
+    color: white;
+    font-size: 1.3em;
+  }
 
-.users ul {
-  list-style: none;
-}
+  .users {
+    padding: 10vh 60px 0 60px;
+    text-align: center;
+    width: 100%;
+  }
 
-.user-card {
-  display: grid;
-  grid-gap: 0.5em;
-  background: #eee;
-  color: black;
-  margin-bottom: 100px;
-  padding: 90px;
-  box-shadow: 3px 3px 10px lightgrey;
-  border-radius: 10px;
-}
+  .users ul {
+    list-style: none;
+  }
 
-.user-card img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 0 auto;
-}
+  .user-card {
+    display: grid;
+    grid-gap: 0.5em;
+    background: #eee;
+    color: black;
+    margin-bottom: 100px;
+    padding: 90px;
+    box-shadow: 3px 3px 10px lightgrey;
+    border-radius: 10px;
+  }
 
-.user-card h2 {
-  font-weight: 400;
-}
+  .user-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
 
-.contact {
-  display: flex;
-  justify-content: center;
-  font-size: 45px;
-  align-items: center;
-}
+  .user-card h2 {
+    font-weight: 500;
+  }
 
-.contact li {
-  margin: 0 20px;
+  .user-location {
+    font-weight: 200;
+    font-size: 0.8em;
+  }
+
+  .user-brand {
+    margin: 3em auto;
+  }
+
+  .user-skills h3 {
+    text-decoration: underline;
+  }
+
+  .contact {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    border-top: 1px solid black;
+
+    padding: 4em 0 0 0;
+    align-items: center;
+    margin: 4em auto 0.5em auto;
+    width: 100%;
+  }
+
+  .contact h3 {
+    font-weight: 400;
+  }
+
+  .contact li {
+    font-size: 50px;
+    margin: 1em 40px 0 40px;
+    display: inline-block;
+  }
+
+  .contact li a {
+    color: #0064759e;
+    transition: all 0.3s ease;
+  }
 }
 
 /* media queries */
-@media only screen and (max-width: 800px) {
+/* @media only screen and (min-width: 700px) {
+  .welcome {
+  }
+  .welcome-heading {
+    font-size: 40px;
+  }
   .users {
     display: grid;
     grid-gap: 4em;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 
   .user-card {
@@ -137,4 +180,4 @@ html {
   .contact li a:hover {
     color: grey;
   }
-}
+} */
