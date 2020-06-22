@@ -1,8 +1,9 @@
 
+<!-- <div class="forms-main-container"> -->
 <div class="forms-container">
 
 <form class="login-form" ng-submit="ctrl.login()" ng-if="!ctrl.loggedInUser">
-
+<button ng-click="ctrl.showLoginForm = !ctrl.showLoginForm" class="xBtn" type="button" name="button">X</button>
   <img class="logo-img" src="images/login-img.png" alt="">
   <fieldset>
 
@@ -32,4 +33,5 @@
 </form>
  <hr>
  <p class="signup-link">You don't have an account ? <a href="#">Sign Up</a></p>
-</div>
+ </div>
+<!-- </div> -->

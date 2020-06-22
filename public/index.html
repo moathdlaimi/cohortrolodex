@@ -17,6 +17,33 @@
     <link rel="stylesheet" href="/css/forms.css" />
   </head>
   <body ng-controller="RolodexController as ctrl">
+    <div class="login-signup-btn">
+      <button
+        ng-click="ctrl.showLoginForm = !ctrl.showLoginForm"
+        type="button"
+        name="button"
+        ng-if="!ctrl.loggedInUser"
+      >
+        Login
+      </button>
+      <button
+        ng-click="ctrl.showSignupForm = !ctrl.showSignupForm"
+        type="button"
+        name="button"
+        ng-if="!ctrl.loggedInUser"
+      >
+        Signup
+      </button>
+      <!-- LOGOUT  -->
+      <button
+        ng-if="ctrl.loggedInUser"
+        ng-click="ctrl.logout()"
+        type="button"
+        name="button"
+      >
+        Logout
+      </button>
+    </div>
     <div
       class="welcome"
       ng-if="!ctrl.loggedInUser && !ctrl.showLoginForm && !ctrl.showSignupForm"
@@ -28,22 +55,7 @@
         <p>View cohort profiles</p>
         <i class="fas fa-chevron-circle-down"></i>
       </a>
-      <div class="login-signup-btn">
-        <button
-          ng-click="ctrl.showLoginForm = !ctrl.showLoginForm"
-          type="button"
-          name="button"
-        >
-          Login
-        </button>
-        <button
-          ng-click="ctrl.showSignupForm = !ctrl.showSignupForm"
-          type="button"
-          name="button"
-        >
-          Signup
-        </button>
-      </div>
+
     </div>
 
     <!-- LOGIN FORM  -->
@@ -54,15 +66,7 @@
     ></div>
 
 
-    <!-- LOGOUT  -->
-    <button
-      ng-if="ctrl.loggedInUser"
-      ng-click="ctrl.logout()"
-      type="button"
-      name="button"
-    >
-      Logout
-    </button>
+
 
     <!-- CREATE NEW USER FORM -->
     <div ng-if="!ctrl.loggedInUser && ctrl.showSignupForm">
@@ -79,5 +83,6 @@
         <div class="" ng-include="'partials/edit_form.html'"></div>
       </div>
     </div>
+
   </body>
 </html>
