@@ -88,7 +88,9 @@ app.controller("RolodexController", [
         method: "DELETE",
         url: "/users/" + id,
       }).then((response) => {
-        this.loggedInUser = false;
+        console.log(this.loggedInUser._id,id);
+        if(this.loggedInUser._id == id){
+          this.loggedInUser = false};
         this.getUsers();
       });
     };
