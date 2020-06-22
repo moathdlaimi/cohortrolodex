@@ -1,14 +1,25 @@
+
+
+
 <form
+class="edit-form"
 ng-if="$index === ctrl.indexOfEditFormToShow"
 ng-submit="ctrl.editUser(user._id)">
-<input type="text" placeholder="First Name" ng-model="ctrl.updateForm.fName" ng-value="user.fName"></br>
-<input type="text" placeholder="Last Name" ng-model="ctrl.updateForm.lName" ng-value="user.lName"></br>
-<input type="url"  placeholder="Profile image" ng-model="ctrl.updateForm.profilePic" ng-value="user.profilePic"><br>
-<input type="url"  placeholder="Github" ng-model="ctrl.updateForm.github" ng-value="user.github"></br>
-<input type="url"  placeholder="Linkedin" ng-model="ctrl.updateForm.linkedin" ng-value="user.linkedin"></br>
-<input type="url"  placeholder="Wesbite" ng-model="ctrl.updateForm.website" ng-value="user.website"></br>
-<input type="text" placeholder="Skills" ng-model="ctrl.updateForm.skills" ng-value="user.skills"></br>
-<input type="text" placeholder="Location" ng-model="ctrl.updateForm.location" ng-value="user.location"></br>
-<input type="text" placeholder="Description" ng-model="ctrl.updateForm.brand" ng-value="user.brand"></br>
-<input type="submit" value="Update User"></br>
+
+<fieldset>
+
+<input class="edit-inputs" type="text" placeholder="First Name" ng-model="ctrl.updateForm.fName" ng-value="user.fName"></br>
+<input class="edit-inputs" type="text" placeholder="Last Name" ng-model="ctrl.updateForm.lName" ng-value="user.lName"></br>
+<input class="edit-inputs" type="url"  placeholder="Profile image" ng-model="ctrl.updateForm.profilePic" ng-value="user.profilePic"><br>
+<input class="edit-inputs" type="url"  placeholder="Github" ng-model="ctrl.updateForm.github" ng-value="user.github"></br>
+<input class="edit-inputs" type="url"  placeholder="Linkedin" ng-model="ctrl.updateForm.linkedin" ng-value="user.linkedin"></br>
+<input class="edit-inputs" type="url"  placeholder="Wesbite" ng-model="ctrl.updateForm.website" ng-value="user.website"></br>
+<input class="edit-inputs" type="text" placeholder="Skills" ng-model="ctrl.updateForm.skills" ng-value="user.skills"></br>
+<input class="edit-inputs" type="text" placeholder="Location" ng-model="ctrl.updateForm.location" ng-value="user.location"></br>
+<textarea class="edit-inputs" type="textarea" placeholder="Description" ng-model="ctrl.updateForm.brand" ng-value="user.brand"></textarea></br>
+
+</fieldset>
+
+<input class="updateBtn" type="submit" value="Update User">
+<button class="cancelBtn" ng-click="ctrl.indexOfEditFormToShow = null"  type="button" name="button">Cancel</button>
 </form>
