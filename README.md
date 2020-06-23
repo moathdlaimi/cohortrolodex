@@ -6,15 +6,15 @@ As a user when I first visit the app I can see the index of existing users and I
 
 ## Technologies
 
--HTML5
+- HTML5
 
--CSS3
+- CSS3
 
--Javascript
+- Javascript
 
--MEAN stack
+- MEAN stack
 
--Postman
+- Postman
 
 ## Approach
 
@@ -22,27 +22,27 @@ We began by establishing preferred work styles. Given that this was a brand new 
 
 ## Unsolved Problems
 
--Users can upload a profile image instead of using a url
+- Users can upload a profile image instead of using a url
 
--User can update user name and password
+- User can update user name and password
 
--Users can search by name, skills, keywords, etc
+- Users can search by name, skills, keywords, etc
 
--Login and signup bar transforms into forms on click
+- Login and signup bar transforms into forms on click
 
 ## Lessons Learned
 
--The smallest part of the project was coding, while working in a group and planning was the foundation of our assignment
+- The smallest part of the project was coding, while working in a group and planning was the foundation of our assignment
 
--Learned the importance of planning and having working design files before we started the project
+- Learned the importance of planning and having working design files before we started the project
 
--The importance of having a leader to make the hard calls for the benefit of the group and make sure everyone isn't going too far off with ideas.
+- The importance of having a leader to make the hard calls for the benefit of the group and make sure everyone isn't going too far off with ideas.
 
--Time commitments is important for tackling a group assignment.
+- Time commitments is important for tackling a group assignment.
 
--It's important to to remember that when in a group you always have someone to lean on.
+- It's important to to remember that when in a group you always have someone to lean on.
 
--It's good to be in a group where you can learn stuff from other people and absorb their knowledge.
+- It's good to be in a group where you can learn stuff from other people and absorb their knowledge.
 
 ## Wireframes
 
