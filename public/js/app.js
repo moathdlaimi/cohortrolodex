@@ -14,6 +14,12 @@ app.controller("RolodexController", [
 
     this.loggedInUser = false;
 
+    //char cound for text area
+    this.charCount = () => {
+      this.charCountArr = this.createForm.brand.split('')
+      this.currentCharCount = this.charCountArr.length
+    }
+
     // ==================
     // ==================
 
