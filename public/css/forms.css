@@ -66,6 +66,11 @@ hr{
   text-decoration: none;
 }
 
+#charcounter {
+  color: white;
+  font-size: 15px;
+}
+
 /* ==================================== */
 /* ==================================== */
 /* LOG-IN FORM */

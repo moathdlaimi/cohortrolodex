@@ -14,6 +14,12 @@ app.controller("RolodexController", [
 
     this.loggedInUser = false;
 
+    //char cound for text area
+    this.charCount = () => {
+      this.charCountArr = this.createForm.brand.split('')
+      this.currentCharCount = this.charCountArr.length
+    }
+
     // ==================
     // ==================
 
@@ -88,9 +94,10 @@ app.controller("RolodexController", [
         method: "DELETE",
         url: "/users/" + id,
       }).then((response) => {
-        console.log(this.loggedInUser._id,id);
-        if(this.loggedInUser._id == id){
-          this.loggedInUser = false};
+        console.log(this.loggedInUser._id, id);
+        if (this.loggedInUser._id == id) {
+          this.loggedInUser = false;
+        }
         this.getUsers();
       });
     };
@@ -139,12 +146,7 @@ app.controller("RolodexController", [
     //scroll test
     this.goToUsers = () => {
       console.log("helloe");
-      // set the location.hash to the id of
-      // the element you wish to scroll to.
-      $location.hash("users");
-
-      // call $anchorScroll()
-      $anchorScroll();
+      $anchorScroll("users");
     };
   },
 ]); ////
