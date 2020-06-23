@@ -20,19 +20,19 @@
 
   <!-- contact -->
 
-  <ul class="contact">
+  <ul class="contact" ng-if="user.github || user.linkedin || user.website">
     <h3>Keep in touch</h3>
-    <li>
+    <li ng-if="user.github">
       <a href="{{user.github}}" target="_blank"
         ><i class="fab fa-github"></i
       ></a>
     </li>
-    <li>
+    <li ng-if="user.linkedin">
       <a href="{{user.linkedin}}" target="_blank"
         ><i class="fab fa-linkedin"></i
       ></a>
     </li>
-    <li>
+    <li ng-if="user.website">
       <a href="{{user.website}}" target="_blank"
         ><i class="fas fa-globe"></i
       ></a>
