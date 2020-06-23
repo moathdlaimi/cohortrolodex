@@ -3,7 +3,7 @@
 
 <form
 class="edit-form"
-ng-if="$index === ctrl.indexOfEditFormToShow"
+ng-if="$index === ctrl.indexOfEditFormToShow && ctrl.loggedInUser"
 ng-submit="ctrl.editUser(user._id)">
 
 <fieldset>
