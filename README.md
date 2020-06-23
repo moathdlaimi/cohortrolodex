@@ -45,4 +45,4 @@ We began by establishing preferred work styles. Given that this was a brand new 
 
 ##Wireframes
 
-[Imgur](https://i.imgur.com/bkxuZgq.png)
+![wireframe](https://i.imgur.com/JxxkLZu.png)
