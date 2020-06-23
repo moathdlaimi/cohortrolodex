@@ -43,6 +43,8 @@ We began by establishing preferred work styles. Given that this was a brand new 
 
 -It's good to be in a group where you can learn stuff from other people and absorb their knowledge.
 
-##Wireframes
+## Wireframes
 
 ![wireframe](https://i.imgur.com/JxxkLZu.png)
+
+![wireframe2](https://i.imgur.com/bkxuZgq.png)
