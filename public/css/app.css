@@ -88,6 +88,7 @@ html {
   padding: 30px;
   box-shadow: 3px 3px 10px lightgrey;
   border-radius: 10px;
+  min-height: 780px;
 }
 
 .user-card img {
