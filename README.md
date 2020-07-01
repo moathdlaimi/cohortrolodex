@@ -1,5 +1,5 @@
 # cohortrolodex
-
+Live Site: https://cohortrolodex.herokuapp.com/
 ## MVP
 
 As a user when I first visit the app I can see the index of existing users and I can view their profile details. As a user I have the ability to sign up and create my own profile which will be added to the index. As a user once i have signed up I may come back to the site and login with my username and password. As a user once I have created a profile I have the ability to edit and/or delete my profile which will update or remove it from the index. As a user I am not able to edit or delete any profile but my own. As a user I am met with a simple, intuitive UX and a clean logical UI.
